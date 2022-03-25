@@ -23,21 +23,21 @@ default: &default
 
 development:
   <<: *default
-  database: d12evntraumtth
+  database: <%=ENV["DATABASE"]%>
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
   # When left blank, postgres will use the default role. This is
   # the same name as the operating system user running Rails.
-  username: erhxqgfmukgscg
+  username: <%=ENV["USER-NAME"]%>
 
   # The password associated with the postgres role (username).
-  password: 6c3c528c39dd8feeb3b7bb8b09641c2866e7b7d71e12828a08dab0f8111cdb90
+  password: <%=ENV["PASSWORD"]%>
 
   # Connect on a TCP socket. Omitted by default since the client uses a
   # domain socket that doesn't need configuration. Windows does not have
   # domain sockets, so uncomment these lines.
-  host: ec2-3-225-213-67.compute-1.amazonaws.com
+  host: <%=ENV["HOST"]%>
 
   # The TCP port the server listens on. Defaults to 5432.
   # If your server runs on a different port number, change accordingly.
